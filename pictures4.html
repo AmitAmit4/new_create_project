@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 100%">
+      <img id="a" src="./cartoon1.jpeg" alt="" style="margin-right: 5px" />
+      <img
+        id="b"
+        src="./cartoon2.jpeg"
+        alt=""
+        style="margin-right: 5px"
+        onmouseover="picChange()"
+      />
+      <img id="c" src="./cartoon3.jpeg" alt="" style="margin-right: 5px" />
+    </div>
+    <script>
+      function picChange() {
+        let A1 = document.getElementById("a");
+        let A2 = document.getElementById("b");
+        let A3 = document.getElementById("c");
+
+        switch (A2.src) {
+          case "./cartoon2.jpeg":
+            A1.src = "./cartoon2.jpeg";
+            A2.src = "./cartoon3.jpeg";
+            A3.src = "./cartoon1.jpeg";
+            break;
+          case "./cartoon3.jpeg":
+            A1.src = "./cartoon3.jpeg";
+            A2.src = "./cartoon1.jpeg";
+            A3.src = "./cartoon2.jpeg";
+            break;
+          case "./cartoon1.jpeg":
+            A1.src = "./cartoon1.jpeg";
+            A2.src = "./cartoon2.jpeg";
+            A3.src = "./cartoon3.jpeg";
+            break;
+          default:
+            // Handle unexpected image source (optional)
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

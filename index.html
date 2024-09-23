@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg width="20" height="20">
+      <defs>
+        <filter id="waveFilter">
+          <feTurbulence type="sine" baseFrequency="0.03" numOctaves="5" />
+          <feDisplacementMap in="SourceGraphic" scale="20" />
+        </filter>
+      </defs>
+    </svg>
+    <svg width="0" height="0">
+      <defs>
+        <filter id="rippleFilter">
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.03"
+            numOctaves="3"
+            result="turbulence"
+          />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" />
+        </filter>
+      </defs>
+    </svg>
+    <svg width="0" height="0">
+      <defs>
+        <filter id="pixelateFilter">
+          <feFlood flood-color="black" result="color" />
+          <feBlend in="SourceGraphic" in2="color" mode="multiply" />
+          <feTile />
+          <feComposite in="SourceGraphic" in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs>
+    </svg>
+
+    <img
+      src="https://static.vecteezy.com/system/resources/previews/025/220/125/non_2x/picture-a-captivating-scene-of-a-tranquil-lake-at-sunset-ai-generative-photo.jpg"
+      alt="Wavy Photo"
+      class="svg-wavy-photo"
+      height="80px"
+      width="120px"
+    />
+    <img
+      src="https://media.licdn.com/dms/image/D5612AQE8NiooxTxA3w/article-cover_image-shrink_720_1280/0/1695825196046?e=2147483647&v=beta&t=UIlR0tBOMVHcLHo2wSJkVycZM7MyUYThqdTFz-Zad8o"
+      alt="Wavy Photo"
+      class="svg-wavy-photo-2"
+      height="80px"
+      width="120px"
+    />
+    <img
+      src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/9/m/6/medium-beautifull-nature-wall-picture-photographic-paper-14x20-original-imag6jtasuued8cy.jpeg?q=90&crop=false"
+      alt="Wavy Photo"
+      class="svg-wavy-photo-3"
+      height="80px"
+      width="120px"
+    />
+  </body>
+</html>
